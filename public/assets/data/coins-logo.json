@@ -1,0 +1,7 @@
+{
+    "data": [
+        {"id": "1000","name": "Bitcoin","image": "btc.png"},
+        {"id": "1001","name": "Etherum","image": "eth.png"},
+        {"id": "1002","name": "Litecoin","image": "ltc.png"}
+    ]
+}
