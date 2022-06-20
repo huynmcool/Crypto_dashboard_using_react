@@ -26,7 +26,7 @@ const RightSidebar = () => {
     }
 
     return (
-        <div class="grid grid-nogutter w-full flex-col m-2">
+        <div class="grid grid-nogutter w-full flex-col m-2 rightsidebar">
             <div class="col-12 h-3rem flex-row">
                 <div class="grid grid-nogutter w-full flex-col">
                     <div class="col-5 p-1  m-2 border-round">
@@ -38,7 +38,7 @@ const RightSidebar = () => {
                 </div>
             </div>
 
-            <div class="col-12 mt-6">
+            <div class="col-12 mt-6 h-10rem">
                 <div class="grid grid-nogutter w-full flex-col">
 
                     <div class="col-12">

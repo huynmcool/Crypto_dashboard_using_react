@@ -4,6 +4,19 @@
 body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
+  background-color: #1b1827;
+}
+
+.leftsidebar{
+  background-color: #261e35;
+}
+
+.middlecontent{
+  background-color: #261e35;
+}
+
+.rightsidebar{
+  background-color: #1b1827;
 }
 
 .carousel-demo .credit-card-item .credit-card-image {

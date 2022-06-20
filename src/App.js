@@ -10,10 +10,10 @@ const App = () => {
   return (
     <div className='app'>
       <div class="grid grid-nogutter h-screen w-screen">
-        <div class="col-.5 bg-bluegray-900 text-white font-bold flex border-right-1" >
+        <div class="col-.5 text-white font-bold flex border-right-1 border-700 leftsidebar" >
           <LeftSidebar></LeftSidebar>
         </div>
-        <div class="col bg-bluegray-900 text-white flex align-items-center justify-content-center" >
+        <div class="col text-white flex align-items-center justify-content-center middlecontent" >
           <div class="grid grid-nogutter w-full h-full overflow-hidden align-items-center justify-content-center m-6">
             <div class="col-1 w-full h-6rem text-white flex">
               <Topbar></Topbar>
@@ -23,7 +23,7 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div class="col-2 bg-red-500 text-white font-bold flex">
+        <div class="col-2 text-white font-bold flex  border-left-1 border-700" id ="rightsidebar">
           <RightSidebar></RightSidebar>
         </div>
       </div>
