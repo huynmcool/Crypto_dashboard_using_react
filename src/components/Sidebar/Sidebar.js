@@ -130,8 +130,7 @@ const LeftSidebar = () => {
 }
 
 const Sidebar = (side) => {
-    console.log(side)
-    switch (side) {
+    switch (side.side) {
         case "left":
             return (<LeftSidebar></LeftSidebar>)
         case "right":
