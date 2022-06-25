@@ -80,7 +80,7 @@ const RightSidebar = () => {
                         <div className="carousel-demo">
                             <div className="card">
                                 <Carousel value={creditCards} numVisible={1} numScroll={1}
-                                    itemTemplate={creditCardTemplate} indicatorsContentClassName="carousel-indicator" />
+                                    itemTemplate={creditCardTemplate}/>
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@ const RightSidebar = () => {
                 <div className="carousel-demo m-2">
                     <div className="card">
                         <Carousel value={recentTransactions} numVisible={3} numScroll={3}
-                            itemTemplate={recentTransactionsTemplate} indicatorsContentClassName="carousel-indicator" orientation='vertical' />
+                            itemTemplate={recentTransactionsTemplate} orientation='vertical' />
                     </div>
                 </div>
             </div>

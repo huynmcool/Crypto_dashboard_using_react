@@ -9,7 +9,7 @@ const CoinPriceCarousel = () => {
     const coinTransactionsService = new CoinPriceService();
 
     useEffect(() => {
-        coinTransactionsService.getCoinPrice().then(data => setcoinPrice(data.slice(0, 6)));
+        coinTransactionsService.getCoinPrice().then(data => setcoinPrice(data.slice(0, 8)));
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     const coinPriceTemplate = (coinPrice) => {
@@ -53,49 +53,39 @@ const CoinPriceCarousel = () => {
         const basicOptions = getLightTheme();
 
         return (
-            <div className="grid">
-                <div className="col-11 m-2">
-                    <div className="surface-0 shadow-2 p-3 border-1 border-50 border-round">
-                        <div className="flex justify-content-between mb-3">
-                            <div>
-                                <span className="block text-500 font-medium mb-3">Orders</span>
-                                <Chart type="line" data={basicData} options={basicOptions} style={{ width: '90%' }} />
-                                <div className="text-900 font-medium text-xl">152</div>
-                            </div>
-                            <div className="flex align-items-center justify-content-center border-round" style={{ width: '2.5rem', height: '2.5rem' }}>
-                            <img src={`assets/images/coins/svg/color/${coinPrice.coin_logo}`} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt='chart-card-logo' />
-                            </div>
+            <div className="m-2 p-3 border-none border-round flex flex-column grid grid-nogutter chart-card justify-content-center align-content-center align-items-center">
+                {/* <img src={`assets/images/coins/svg/color/${coinPrice.coin_logo}`} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt='chart-card-logo' className="chart-card-logo col-12" /> */}
+                <div className='pb-3 col-12 flex justify-content-center align-content-center align-items-center relative'>
+                    <img src={`assets/images/coins/svg/color/${coinPrice.coin_logo}`} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt='chart-card-logo' className="chart-card-logo col-12 relative" />
+                </div>
+                <div className="col-12 flex-column -mt-5">
+                    <div className='grid grid-nogutter'>
+                        <div className='col flex flex-column'>
+                            <span className="block text-0 font-medium text-sm mb-3">{coinPrice.coin_short} to USD</span>
+                            <span className="block text-0 font-bold mb-2">{coinPrice.toUSD}</span>
                         </div>
-                        <span className="text-green-500 font-medium">24 new </span>
-                        <span className="text-500">since last visit</span>
+                        <div className='col flex justify-content-end'>
+                            <span className="block text-0 font-bold mb-2">{coinPrice.toUSD}</span>
+                        </div>
                     </div>
                 </div>
+                <div className="col-12 flex justify-content-end align-content-end align-items-end">
+
+                </div>
+                <div className='pb-3 col-12 flex bg-blue-900'>
+                    <Chart type="line" data={basicData} options={basicOptions} style={{ width: '20%' }}/>
+                </div>
             </div>
-            // <div className="p-3 border-none border-round flex relative chart-card m-2">
-            //     <img src={`assets/images/coins/svg/color/${coinPrice.coin_logo}`} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt='chart-card-logo' className="chart-card-logo relative" />
-            //     <div className='pb-3 relative'>
-            //         <div className="grid grid-nogutter flex">
-            //             <div className="col-6">
-            //                 <span className="block text-600 font-bold text-sm m-2">{coinPrice.coin_short} to USD</span>
-            //                 <span className="block text-0 font-bold text-xl m-2">{coinPrice.toUSD}$</span>
-            //             </div>
-            //             <div className="col-6 flex justify-content-end flex">
-            //                 <span className="block text-0 font-bold m-2 flex">+ 5.26%</span>
-            //             </div>
-            //         </div>
-            //         <Chart type="line" data={basicData} options={basicOptions} style={{ width: '90%' }} />
-            //     </div>
-            // </div>
         );
     }
 
     return (
-        <div class="grid grid-nogutter w-full m-2 align-content-start">
+        <div class="grid grid-nogutter w-full bg-yellow-900 ">
             <div class="col-12">
-                <div className="carousel-demo m-2">
+                <div className="m-2">
                     <div className="card">
-                        <Carousel value={coinPrices} numVisible={3} numScroll={3}
-                            itemTemplate={coinPriceTemplate} indicatorsContentClassName="carousel-indicator" />
+                        <Carousel value={coinPrices} numVisible={4} numScroll={4}
+                            itemTemplate={coinPriceTemplate} indicatorsContentClassName='carousel-indicators-lmao'/>
                     </div>
                 </div>
             </div>

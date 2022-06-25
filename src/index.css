@@ -10,4 +10,4 @@ body {
 .middlecontent{
   background-color: #261e35;
 }
-
+.p-carousel-indicators {display: none !important;}

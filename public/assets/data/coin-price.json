@@ -76,6 +76,32 @@
                 "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
             ],
             "coin_logo": "ada.svg"
+        },
+        
+        {
+            "coin_name": "Cardano",
+            "coin_short": "ADA",
+            "toUSD": "0,48",
+            "datasets":[
+                65, 59, 80, 81, 56, 55, 40, 60, 90 ,100 ,200, 300
+            ],
+            "labels": [
+                "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+            ],
+            "coin_logo": "ada.svg"
+        },
+
+        {
+            "coin_name": "Cardano",
+            "coin_short": "ADA",
+            "toUSD": "0,48",
+            "datasets":[
+                65, 59, 80, 81, 56, 55, 40, 60, 90 ,100 ,200, 300
+            ],
+            "labels": [
+                "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+            ],
+            "coin_logo": "ada.svg"
         }
     ]
 }

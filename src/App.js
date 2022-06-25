@@ -13,20 +13,19 @@ const App = () => {
   return (
     <div className='app'>
       <div class="grid grid-nogutter h-screen w-screen">
-        <div class="col-.5 text-white font-bold flex border-right-1 border-700 leftsidebar" >
+        <div class="col-.5 font-bold flex border-right-1 border-700 leftsidebar" >
           {/* <Sidebar side={'left'}></Sidebar> */}
           {/* <LeftSidebar></LeftSidebar> */}
           <Sidebar side={"left"}></Sidebar>
         </div>
-        <div class="col text-white flex align-items-center justify-content-center middlecontent" >
+        <div class="col flex align-items-center justify-content-center middlecontent" >
           <div class="grid grid-nogutter w-full h-full overflow-hidden align-items-center justify-content-center m-6">
-            <div class="col-1 w-full h-6rem text-white flex">
+            <div class="col-1 w-full h-6rem flex">
               <Topbar></Topbar>
             </div>
-            <div class="col w-full h-full bg-green-500 text-white font-bold flex">
-
-              <div className='grid grid-nogutter flex-column w-full h-full align-items-center justify-content-center'>
-                <div className='col-12 h-full'>
+            <div class="col w-full h-full bg-green-500">
+              <div className='grid grid-nogutter flex flex-column w-full align-items-start justify-content-start'>
+                <div className='col-12'>
                   {/* <SmallChartCard /> */}
                   <CoinPriceCarousel></CoinPriceCarousel>
                 </div>
@@ -36,7 +35,7 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div class="col-2 text-white font-bold flex border-left-1 border-700" id="rightsidebar">
+        <div class="col-2 text-white font-bold flex border-left-1 border-700">
           {/* <RightSidebar></RightSidebar> */}
           <Sidebar side={"right"}></Sidebar>
         </div>
