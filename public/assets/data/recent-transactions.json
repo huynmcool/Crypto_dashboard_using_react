@@ -1,0 +1,10 @@
+{
+    "data": [
+        {"id": "1000","coin_name": "Bitcoin","coin_short": "BTC","amount": "42.5$","date":"21/06/2022","time":"6:00 AM","coin_logo": "btc.svg"},
+        {"id": "1000","coin_name": "Ethereum","coin_short": "ETH","amount": "42.5$","date":"21/06/2022","time":"6:00 AM","coin_logo": "eth.svg"},
+        {"id": "1000","coin_name": "Litecoin","coin_short": "LTC","amount": "42.5$","date":"21/06/2022","time":"6:00 AM","coin_logo": "ltc.svg"},
+        {"id": "1000","coin_name": "Binance Coin","coin_short": "BNB","amount": "42.5$","date":"21/06/2022","time":"6:00 AM","coin_logo": "bnb.svg"},
+        {"id": "1000","coin_name": "Tether","coin_short": "USDT","amount": "42.5$","date":"21/06/2022","time":"6:00 AM","coin_logo": "usdt.svg"},
+        {"id": "1000","coin_name": "Stellar","coin_short": "XLM","amount": "42.5$","date":"21/06/2022","time":"6:00 AM","coin_logo": "xlm.svg"}
+    ]
+}
