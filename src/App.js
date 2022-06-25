@@ -2,8 +2,8 @@ import React from 'react';
 import "primeflex/primeflex.css";
 import './App.css';
 
-import LeftSidebar from './components/Sidebar/LeftSidebar';
-import RightSidebar from './components/Sidebar/RightSidebar';
+// import LeftSidebar from './components/Sidebar/LeftSidebar';
+// import RightSidebar from './components/Sidebar/RightSidebar';
 import Topbar from './components/Topbar/Topbar';
 import Sidebar from './components/Sidebar/Sidebar';
 
