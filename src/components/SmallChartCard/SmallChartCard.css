@@ -1,0 +1,8 @@
+.chart-card{
+    background-color: #332b42;
+}
+.chart-card-logo{
+    width: 30%;
+    z-index: 1;
+    margin-top: -2rem;
+}

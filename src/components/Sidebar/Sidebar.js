@@ -3,6 +3,7 @@ import { Button } from 'primereact/button';
 import { Carousel } from 'primereact/carousel';
 import { CreditCardService } from '../../service/CreditCardsService';
 import { RecentTransactionsService } from '../../service/RecentTransactionsService';
+import './Sidebar.css'
 
 const RightSidebar = () => {
 
@@ -12,7 +13,7 @@ const RightSidebar = () => {
     const recentTransactionsService = new RecentTransactionsService();
 
     useEffect(() => {
-        creditCardService.getCreditCardsSmall().then(data => setCreditCards(data.slice(0, 6)));
+        creditCardService.getCreditCards().then(data => setCreditCards(data.slice(0, 6)));
         recentTransactionsService.getRecentTransactions().then(data => setRecentTransactions(data.slice(0, 6)));
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -39,9 +40,9 @@ const RightSidebar = () => {
                         <span className="block text-900 font-bold mb-2">{recentTransactions.coin_name}</span>
                         <span className="block text-500 font-medium text-sm">{recentTransactions.coin_short}</span>
                     </div>
-                    <div className="col flex-column">
+                    <div className="col flex flex-column justify-content-end align-content-end align-items-end">
                         <span className="block text-900 font-bold mb-2">{recentTransactions.amount}</span>
-                        <span className="block text-500 font-medium text-xs">{recentTransactions.date} {recentTransactions.time}</span>
+                        <span className="block text-500 font-small text-xs">{recentTransactions.date} {recentTransactions.time}</span>
                     </div>
                 </div>
             </div>
@@ -49,9 +50,9 @@ const RightSidebar = () => {
     }
 
     return (
-        <div class="grid grid-nogutter w-full flex-col m-2 rightsidebar align-content-start">
+        <div class="grid grid-nogutter w-full flex-column m-2 rightsidebar align-content-start">
             <div class="col-12 h-3rem flex-row">
-                <div class="grid grid-nogutter w-full flex-col">
+                <div class="grid grid-nogutter w-full">
                     <div class="col-5 p-1  m-2 border-round">
                         <Button icon="pi pi-bell" />
                     </div>
@@ -62,10 +63,9 @@ const RightSidebar = () => {
             </div>
 
             <div class="col-12 mt-6 h-10rem mb-6">
-                <div class="grid grid-nogutter w-full flex-col">
-
+                <div class="grid grid-nogutter w-full flex-column">
                     <div class="col-12">
-                        <div class="grid grid-nogutter w-full flex-col">
+                        <div class="grid grid-nogutter w-full">
                             <div class="col p-1  m-2 border-round text-xl">
                                 Your Cards
                             </div>
@@ -76,7 +76,6 @@ const RightSidebar = () => {
                             </div>
                         </div>
                     </div>
-
                     <div class="col-12">
                         <div className="carousel-demo">
                             <div className="card">
@@ -89,7 +88,7 @@ const RightSidebar = () => {
             </div>
 
             <div class="col-12">
-                <div className="carousel-demo">
+                <div className="carousel-demo m-2">
                     <div className="card">
                         <Carousel value={recentTransactions} numVisible={3} numScroll={3}
                             itemTemplate={recentTransactionsTemplate} indicatorsContentClassName="carousel-indicator" orientation='vertical' />
@@ -122,15 +121,15 @@ const LeftSidebar = () => {
             <div class="p-1  m-2 border-round">
                 <Button icon="pi pi-folder" />
             </div>
-            <div class="p-1  m-2 border-round">
+            <div class="align-self-end flex p-1  m-2 border-round">
                 <Button icon="pi pi-cog" />
             </div>
         </div>
     )
 }
 
-const Sidebar = (side) => {
-    switch (side.side) {
+const Sidebar = (obj) => {
+    switch (obj.side) {
         case "left":
             return (<LeftSidebar></LeftSidebar>)
         case "right":
