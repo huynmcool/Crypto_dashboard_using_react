@@ -6,38 +6,41 @@ import './App.css';
 // import RightSidebar from './components/Sidebar/RightSidebar';
 import Topbar from './components/Topbar/Topbar';
 import Sidebar from './components/Sidebar/Sidebar';
-import SmallChartCard from './components/SmallChartCard/SmallChartCard';
 import CoinPriceCarousel from './components/CoinsPriceCarousel/CoinPriceCarousel';
 
 const App = () => {
   return (
     <div className='app'>
-      <div class="grid grid-nogutter h-screen w-screen">
-        <div class="col-.5 font-bold flex border-right-1 border-700 leftsidebar" >
-          {/* <Sidebar side={'left'}></Sidebar> */}
-          {/* <LeftSidebar></LeftSidebar> */}
+      <div className="grid grid-nogutter">
+
+        {/* <div className="col-1 border-right-1 border-700 h-screen bg-red-900">
+          <Sidebar side={"left"}></Sidebar>
+        </div> */}
+
+        <div className="col-fixed border-right-1 border-700 h-screen bg-red-900" style={{ width: '4rem' }}>
           <Sidebar side={"left"}></Sidebar>
         </div>
-        <div class="col flex align-items-center justify-content-center middlecontent" >
-          <div class="grid grid-nogutter w-full h-full overflow-hidden align-items-center justify-content-center m-6">
-            <div class="col-1 w-full h-6rem flex">
-              <Topbar></Topbar>
-            </div>
-            <div class="col w-full h-full bg-green-500">
-              <div className='grid grid-nogutter flex flex-column w-full align-items-start justify-content-start'>
-                <div className='col-12'>
-                  {/* <SmallChartCard /> */}
-                  <CoinPriceCarousel></CoinPriceCarousel>
+
+        <div className="col flex justify-content-start bg-blue-900" >
+          <div className="grid grid-nogutter">
+            <div className="col border-left-1 border-700 p-0">
+              <div className="grid grid-nogutter flex-column align-items-start">
+                <div className="col-12 bg-green-900">
+                  <Topbar></Topbar>
                 </div>
 
+                <div className="col-12 bg-yellow-900">
+                  <CoinPriceCarousel></CoinPriceCarousel>
+                </div>
               </div>
-
             </div>
+
+            <div className="col-2 border-left-1 border-700 h-screen bg-pink-900 p-0">
+              <Sidebar side={"right"}></Sidebar>
+            </div>
+
           </div>
-        </div>
-        <div class="col-2 text-white font-bold flex border-left-1 border-700">
-          {/* <RightSidebar></RightSidebar> */}
-          <Sidebar side={"right"}></Sidebar>
+
         </div>
       </div>
     </div>

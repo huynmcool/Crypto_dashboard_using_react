@@ -6,12 +6,12 @@
     background-color: #1b1827;
 }
 
-.carousel-demo .credit-card-item .credit-card-image {
+.carousel-demo .credit-card-image {
     width: 100%;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.carousel-demo .credit-card-item .credit-card-item-content {
+.carousel-demo .credit-card-item-content {
     margin: .3rem;
     text-align: center;
     padding: .3rem 0;
