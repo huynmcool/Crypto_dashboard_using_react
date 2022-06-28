@@ -31,28 +31,27 @@ const RightSidebar = () => {
 
     const recentTransactionsTemplate = (recentTransactions) => {
         return (
-            <div className="surface-0 shadow-2 p-2 border-1 border-50 border-round">
-                <div className="grid flex h-full">
-                    <div className="col-3 flex align-items-center justify-content-center">
-                        <img src={`assets/images/coins/svg/black/${recentTransactions.coin_logo}`} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={recentTransactions.coin_logo} className="credit-card-image" />
-                    </div>
-                    <div className="col w-5 p-2">
-                        <span className="block text-900 font-bold">{recentTransactions.coin_name}</span>
-                        <span className="block text-500 font-medium text-sm">{recentTransactions.coin_short}</span>
-                    </div>
-                    <div className="col flex flex-column align-items-end p-2">
-                        <span className="block text-900 font-bold mb-2">{recentTransactions.amount}</span>
-                        <span className="block text-500 font-small text-xs">{recentTransactions.date}</span>
-                        <span className="block text-500 font-small text-xs">{recentTransactions.time}</span>
-                    </div>
+            <div className="grid grid-nogutter surface-0 shadow-2 border-1 border-50 border-round ml-6 mr-6">
+                <div className="col-3 flex align-items-center justify-content-center">
+                    <img className='w-8' src={`assets/images/coins/svg/black/${recentTransactions.coin_logo}`} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={recentTransactions.coin_logo} />
+                </div>
+                <div className="col">
+                    <span className="block text-900 font-bold">{recentTransactions.coin_name}</span>
+                    <span className="block text-500 font-medium text-sm">{recentTransactions.coin_short}</span>
+                </div>
+                <div className="col flex flex-column align-items-end">
+                    <span className="block text-900 font-bold mb-2">{recentTransactions.amount}</span>
+                    <span className="block text-500 font-small text-xs">{recentTransactions.date}</span>
+                    <span className="block text-500 font-small text-xs">{recentTransactions.time}</span>
                 </div>
             </div>
         );
     }
 
     return (
-        <div className="grid grid-nogutter h-screen flex-column rightsidebar align-content-start">
-            <div className="col-12 h-3rem flex-row">
+        <div className="grid grid-nogutter flex-column rightsidebar align-content-start">
+
+            <div className="col-12 h-3rem flex-row mt-6 mb-6">
                 <div className="grid grid-nogutter w-full">
                     <div className="col-5 p-1 m-2 border-round">
                         <Button icon="pi pi-bell" />
@@ -88,13 +87,9 @@ const RightSidebar = () => {
                 </div>
             </div>
 
-            <div className="col-12 p-2">
-                <div className="carousel-demo">
-                    <div className="card">
-                        <Carousel value={recentTransactions} numVisible={3} numScroll={3}
-                            itemTemplate={recentTransactionsTemplate} orientation='vertical' />
-                    </div>
-                </div>
+            <div className="col-12">
+                <Carousel className='w-full' value={recentTransactions} numVisible={3} numScroll={3}
+                    itemTemplate={recentTransactionsTemplate} orientation='vertical' />
             </div>
 
         </div>
@@ -103,27 +98,26 @@ const RightSidebar = () => {
 
 const LeftSidebar = () => {
     return (
-        <div className="flex flex-wrap flex-column">
-            <div className="p-1  m-2 border-round">
-                <img alt="logo" src="showcase/images/logo.png" onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} height="40" className="mb-3"></img>
+
+        <div className='grid grid-nogutter flex-column h-full align-items-center border-right-1 border-700 pt-6'>
+            <div className='col-12 flex justify-content-center'><img alt="logo" src="assets/images/web-logo/small-logo.png" onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} className="mb-6" style={{ width: '100%' }}></img></div>
+            <div className='col-12 flex justify-content-center mb-6'>
+                <Button icon="pi pi-th-large" className="p-button-lg w-6"/>
             </div>
-            <div className="p-1  m-2 border-round">
-                <Button icon="pi pi-th-large" />
+            <div className='col-12 flex justify-content-center mb-6'>
+                <Button icon="pi pi-comment" className="p-button-lg w-6"/>
             </div>
-            <div className="p-1  m-2 border-round">
-                <Button icon="pi pi-comment" />
+            <div className='col-12 flex justify-content-center mb-6'>
+                <Button icon="pi pi-shopping-cart" className="p-button-lg w-6"/>
             </div>
-            <div className="p-1  m-2 border-round">
-                <Button icon="pi pi-shopping-cart" />
+            <div className='col-12 flex justify-content-center mb-6'>
+                <Button icon="pi pi-credit-card" className="p-button-lg w-6"/>
             </div>
-            <div className="p-1  m-2 border-round">
-                <Button icon="pi pi-credit-card" />
+            <div className='col-12 flex justify-content-center mb-6'>
+                <Button icon="pi pi-folder" className="p-button-lg w-6"/>
             </div>
-            <div className="p-1  m-2 border-round">
-                <Button icon="pi pi-folder" />
-            </div>
-            <div className="p-1  m-2 border-round">
-                <Button icon="pi pi-cog" />
+            <div className='col-12 flex justify-content-center mb-6'>
+                <Button  icon="pi pi-cog" className="p-button-lg w-6"/>
             </div>
         </div>
     )

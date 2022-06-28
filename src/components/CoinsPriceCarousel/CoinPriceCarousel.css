@@ -16,18 +16,17 @@
     text-align: center;
     padding: .3rem 0;
 }
+.media-demo .product-item .product-item-content {
+    border: 1px solid var(--surface-d);
+    border-radius: 3px;
+}
+.media-demo .product-item .product-image {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
 .coin-price-carousel-container{
     width: 100%;
 }
 .coin-price-carousel-content{
-    width: 50%;
-}
-.media-demo .product-item .product-item-content {
-    border: 1px solid var(--surface-d);
-    border-radius: 3px;
-    text-align: center;
-}
-.media-demo .product-item .product-image {
     width: 100%;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
+

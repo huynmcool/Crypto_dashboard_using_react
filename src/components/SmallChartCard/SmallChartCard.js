@@ -19,7 +19,7 @@ const SmallChartCard = () => {
     const getLightTheme = () => {
         let basicOptions = {
             responsive: true,
-            maintainAspectRatio: true,
+            maintainAspectRatio: false,
             aspectRatio: 2,
             plugins: {
                 legend: {
@@ -43,23 +43,26 @@ const SmallChartCard = () => {
     const basicOptions = getLightTheme();
 
     return (
-        <div>
-            <div className="p-3 border-none border-round flex flex-wrap align-content-center align-items-center justify-content-center chart-card">
-                <img src={`assets/images/coins/svg/color/btc.svg`} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt='chart-card-logo' className="chart-card-logo relative" />
-                <div className='pb-3'>
-                    <div className="grid grid-nogutter flex">
-                        <div className="col-6">
-                            <span className="block text-600 font-bold text-sm m-2">BTC to USD</span>
-                            <span className="block text-0 font-bold text-xl m-2">8422.33$</span>
-                        </div>
-                        <div className="col-6 flex justify-content-end flex flex-wrap">
-                            <span className="block text-0 font-bold m-2 flex">+ 5.26%</span>
-                        </div>
+        <div className='w-full'>
+            <div className="border-none border-round-lg chart-card flex flex-column p-5 h-full">
+                <div className="grid grid-nogutter flex">
+                    {/* <div className='col-12 flex justify-content-center'>
+                        <img src={`assets/images/coins/svg/color/btc.svg`} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt='chart-card-logo' className="chart-card-logo relative" />
+                    </div> */}
+                    <div className="col-6">
+                        <span className="block text-600 font-bold text-sm m-2">BTC to USD</span>
+                        <span className="block text-0 font-bold text-xl m-2">8422.33$</span>
                     </div>
-                    <Chart type="line" data={basicData} options={basicOptions} style={{ width: '90%' }} />
+                    <div className="col-6 flex justify-content-end flex flex-wrap">
+                        <span className="block text-0 font-bold m-2 flex text-green-400">+ 5.26%</span>
+                    </div>
+                </div>
+                <div className='flex justify-content-center'>
+                    <Chart type="line" data={basicData} options={basicOptions} style={{ width: '100%' }} />
                 </div>
             </div>
         </div>
+
     )
 }
 

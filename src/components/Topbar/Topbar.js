@@ -10,9 +10,8 @@ const Topbar = () => {
     }, []);
     const [searchValue, setSearchValue] = useState('');
     return (
-
-        <div className="grid grid-nogutter">
-            <div className="col text-white font-bold flex align-items-center">
+        <div className="grid grid-nogutter m-6">
+            <div className="col text-white font-bold flex align-items-center ">
                 <div className="flex align-items-start flex-column lg:justify-content-between lg:flex-row">
                     <div>
                         <div className="font-bold text-3xl">Dashboard</div>
