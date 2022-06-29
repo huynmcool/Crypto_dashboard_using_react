@@ -4,7 +4,7 @@
 body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
-  background-color: #1b1827;
+  background: rgb(22,28,70);
+  background: linear-gradient(180deg, rgba(22,28,70,1) 5%, rgba(255,196,67,1) 20%, rgba(153,179,141,1) 50%, rgba(79,209,223,1) 90%, rgba(101,64,214,1) 100%);
 }
 
-.p-carousel-indicators {display: none !important;}
