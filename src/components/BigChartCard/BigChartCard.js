@@ -14,7 +14,7 @@ const BigChartCard = () => {
         {
             label: 'Monthly',
             command: () => {
-               
+
             }
         },
         {
@@ -33,6 +33,20 @@ const BigChartCard = () => {
                 fill: false,
                 borderColor: '#42A5F5',
                 tension: .4
+            },
+            {
+                label: 'Second Dataset',
+                data: [28, 48, 40, 19, 86, 27, 90],
+                fill: false,
+                borderColor: '#66BB6A',
+                tension: .4
+            },
+            {
+                label: 'Third Dataset',
+                data: [12, 51, 62, 33, 21, 62, 45],
+                fill: false,
+                borderColor: '#FFA726',
+                tension: .4
             }
         ]
     });
@@ -44,17 +58,32 @@ const BigChartCard = () => {
             aspectRatio: 1.5,
             plugins: {
                 legend: {
-                    display: true,
+                    labels: {
+                        color: '#495057'
+                    }
                 }
             },
             scales: {
                 x: {
-                    display: true,
+                    ticks: {
+                        color: '#ebedef'
+                    },
+                    grid: {
+                        color: '#495057'
+                    }
                 },
                 y: {
+                    type: 'linear',
                     display: true,
+                    position: 'left',
+                    ticks: {
+                        color: '#ebedef'
+                    },
+                    grid: {
+                        color: '#495057'
+                    }
                 }
-            },
+            }
         };
 
         return basicOptions
