@@ -1,8 +1,29 @@
 import React, { useState } from 'react';
 import { Chart } from 'primereact/chart';
+import { SplitButton } from 'primereact/splitbutton';
 import './BigChartCard.css'
 
 const BigChartCard = () => {
+    const items = [
+        {
+            label: 'Daily',
+            command: () => {
+
+            }
+        },
+        {
+            label: 'Monthly',
+            command: () => {
+               
+            }
+        },
+        {
+            label: 'Yearly',
+            command: () => {
+                window.location.href = 'https://facebook.github.io/react/'
+            }
+        }
+    ];
     const [basicData] = useState({
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [
@@ -49,16 +70,16 @@ const BigChartCard = () => {
                     <div className='col-12 mb-3'>
                         <div className="grid grid-nogutter">
                             <div className="col-6">
-                                <span className="block text-0 font-bold text-xl">Market Overview</span>
+                                <span className="block text-0 font-bold text-2xl">Market Overview</span>
                             </div>
                             <div className="col-6 flex justify-content-end">
-                                <span className="block text-0 font-bold flex text-green-400">+ 5.26%</span>
+                                <SplitButton label="Monthly" model={items} className="p-button-secondary mr-2 mb-2"></SplitButton>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div className='col-12'>
-                        <Chart className='' type="line" data={basicData} options={basicOptions} style={{ width: '100%',height:'100%'}} />
+                        <Chart className='' type="line" data={basicData} options={basicOptions} style={{ width: '100%', height: '100%' }} />
                     </div>
                 </div>
             </div>

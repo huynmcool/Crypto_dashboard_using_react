@@ -2,7 +2,9 @@
     background-color: #332b42;
 }
 .chart-card-logo{
-    width: 20%;
+    position: absolute;
     z-index: 1;
-    margin-top: -1rem;
+    top: 0;
+    left: 40%;
+    margin-top:-40px
 }

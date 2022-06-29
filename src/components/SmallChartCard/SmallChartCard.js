@@ -20,7 +20,7 @@ const SmallChartCard = () => {
         let basicOptions = {
             responsive: true,
             maintainAspectRatio: false,
-            aspectRatio: 2,
+            aspectRatio: 3,
             plugins: {
                 legend: {
                     display: false,
@@ -43,15 +43,15 @@ const SmallChartCard = () => {
     const basicOptions = getLightTheme();
 
     return (
-        <div className='w-full'>
+        <div className='w-full relative'>
+            <div className='chart-card-logo'>
+                <img className="w-full h-full" src={`assets/images/coins/svg/color/btc.svg`} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt='chart-card-logo' />
+            </div>
             <div className="border-none border-round-lg chart-card flex flex-column p-5 h-full">
                 <div className="grid grid-nogutter flex">
-                    {/* <div className='col-12 flex justify-content-center'>
-                        <img src={`assets/images/coins/svg/color/btc.svg`} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt='chart-card-logo' className="chart-card-logo relative" />
-                    </div> */}
                     <div className="col-6">
-                        <span className="block text-600 font-bold text-sm m-2">BTC to USD</span>
-                        <span className="block text-0 font-bold text-xl m-2">8422.33$</span>
+                        <span className="block text-600 font-bold m-2">BTC to USD</span>
+                        <span className="block text-0 font-bold text-2xl m-2">8422.33$</span>
                     </div>
                     <div className="col-6 flex justify-content-end flex flex-wrap">
                         <span className="block text-0 font-bold m-2 flex text-green-400">+ 5.26%</span>

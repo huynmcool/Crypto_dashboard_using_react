@@ -10,7 +10,7 @@ const Topbar = () => {
     }, []);
     const [searchValue, setSearchValue] = useState('');
     return (
-        <div className="grid grid-nogutter m-6">
+        <div className="grid grid-nogutter">
             <div className="col text-white font-bold flex align-items-center ">
                 <div className="flex align-items-start flex-column lg:justify-content-between lg:flex-row">
                     <div>
@@ -39,7 +39,7 @@ const Topbar = () => {
                     </div>
                 </div>
             </div>
-            <div className="col text-white font-bold flex justify-content-end align-items-center">
+            <div className="col-4 text-white font-bold flex justify-content-end align-items-center pl-7">
                 <span className="p-input-icon-right">
                     <i className="pi pi-search" />
                     <InputText value={searchValue} className="p-inputtext-lg block" onChange={(e) => setSearchValue(e.target.value)} placeholder="Search" />

@@ -30,7 +30,7 @@ const App = () => {
 
             <div className="col p-0">
               <div className="grid grid-nogutter align-items-start">
-                <div className="col-12">
+                <div className="col-12 p-6">
                   <Topbar></Topbar>
                 </div>
                 <div className="col-12 flex flex-column justify-content-start">

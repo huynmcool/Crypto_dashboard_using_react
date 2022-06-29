@@ -13,17 +13,17 @@ const QuickTransferCard = () => {
                     </div>
                     <div className='col-12'>
                         <div className="grid grid-nogutter pb-3 pt-3">
-                            <div className="col-3 flex justify-content-center">
-                                <Button icon="pi pi-user" />
+                            <div className="col flex justify-content-center align-items-center">
+                                <Button icon="pi pi-user" className='p-button-rounded p-button-lg w-10 h-4rem' />
                             </div>
-                            <div className="col-3 flex justify-content-center">
-                                <Button icon="pi pi-user" />
+                            <div className="col flex justify-content-center align-items-center">
+                                <Button icon="pi pi-user" className='p-button-rounded p-button-lg w-10 h-4rem'/>
                             </div>
-                            <div className="col-3 flex justify-content-center">
-                                <Button icon="pi pi-user" />
+                            <div className="col flex justify-content-center align-items-center">
+                                <Button icon="pi pi-user" className='p-button-rounded p-button-lg w-10 h-4rem'/>
                             </div>
-                            <div className="col-3 flex justify-content-center">
-                                <Button icon="pi pi-user-plus" />
+                            <div className="col flex justify-content-center align-items-center">
+                                <Button icon="pi pi-user-plus" className='p-button-rounded p-button-lg p-button-outlined w-10 h-4rem'/>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ const QuickTransferCard = () => {
                         </div>
                     </div>
                     <div className='col-12 flex justify-content-center'>
-                        <Button label="Transfer" icon="pi pi-check" />
+                        <Button label="Transfer Now !" icon="pi pi-send" className='w-full h-3rem'/>
                     </div>
                 </div>
             </div>
