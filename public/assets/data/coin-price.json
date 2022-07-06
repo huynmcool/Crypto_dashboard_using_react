@@ -1,0 +1,107 @@
+{
+    "data": [
+        {
+            "coin_name": "Bitcoin",
+            "coin_short": "BTC",
+            "toUSD": "21.096,60",
+            "datasets":[
+                65, 59, 80, 81, 56, 55, 40, 60, 90 ,100 ,200, 300
+            ],
+            "labels": [
+                "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+            ],
+            "coin_logo": "btc.svg"
+        },
+
+        {
+            "coin_name": "Ethereum",
+            "coin_short": "ETH",
+            "toUSD": "1,180.24",
+            "datasets":[
+                65, 59, 80, 81, 56, 55, 40, 60, 90 ,100 ,200, 300
+            ],
+            "labels": [
+                "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+            ],
+            "coin_logo": "eth.svg"
+        },
+
+        {
+            "coin_name": "Tether",
+            "coin_short": "USDT",
+            "toUSD": "1,00",
+            "datasets":[
+                65, 59, 80, 81, 56, 55, 40, 60, 90 ,100 ,200, 300
+            ],
+            "labels": [
+                "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+            ],
+            "coin_logo": "USDT.svg"
+        },
+
+        {
+            "coin_name": "USD Coin",
+            "coin_short": "BTC",
+            "toUSD": "1,00",
+            "datasets":[
+                65, 59, 80, 81, 56, 55, 40, 60, 90 ,100 ,200, 300
+            ],
+            "labels": [
+                "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+            ],
+            "coin_logo": "usdc.svg"
+        },
+
+        {
+            "coin_name": "Binance Coin",
+            "coin_short": "BNB",
+            "toUSD": "234,03",
+            "datasets":[
+                65, 59, 80, 81, 56, 55, 40, 60, 90 ,100 ,200, 300
+            ],
+            "labels": [
+                "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+            ],
+            "coin_logo": "bnb.svg"
+        },
+
+        {
+            "coin_name": "Cardano",
+            "coin_short": "ADA",
+            "toUSD": "0,48",
+            "datasets":[
+                65, 59, 80, 81, 56, 55, 40, 60, 90 ,100 ,200, 300
+            ],
+            "labels": [
+                "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+            ],
+            "coin_logo": "ada.svg"
+        },
+        
+        {
+            "coin_name": "Cardano",
+            "coin_short": "ADA",
+            "toUSD": "0,48",
+            "datasets":[
+                65, 59, 80, 81, 56, 55, 40, 60, 90 ,100 ,200, 300
+            ],
+            "labels": [
+                "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+            ],
+            "coin_logo": "ada.svg"
+        },
+
+        {
+            "coin_name": "Cardano",
+            "coin_short": "ADA",
+            "toUSD": "0,48",
+            "datasets":[
+                65, 59, 80, 81, 56, 55, 40, 60, 90 ,100 ,200, 300
+            ],
+            "labels": [
+                "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+            ],
+            "coin_logo": "ada.svg"
+        }
+    ]
+}
